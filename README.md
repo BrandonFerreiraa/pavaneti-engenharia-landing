@@ -24,7 +24,7 @@ O conteúdo (textos institucionais, descrições de cada um dos 16 serviços, lo
 - **Página única (SPA estática)** — hero, sobre, serviços, diferenciais e contato em uma única página, com navegação por âncoras e scroll suave.
 - **16 serviços detalhados** — cada card traz foto, título e descrição técnica reais (normas ABNT, NRs, leis e prazos de validade dos laudos), extraídos das páginas internas do site original.
 - **Conversão via WhatsApp** — todo CTA (incluindo cada card de serviço) abre o WhatsApp com uma mensagem pré-preenchida específica para aquele serviço.
-- **100% autocontido** — logotipo e todas as imagens estão embutidos como Base64 diretamente no HTML; o site funciona a partir de um único arquivo, sem requisições externas.
+- **Motion sutil** — entrada animada no hero, contadores numéricos, scroll-reveal nas seções e microinterações (tilt 3D, hover nos cards), respeitando `prefers-reduced-motion`.
 - **Responsivo** — layout adaptado para desktop, tablet e mobile, com menu hambúrguer e grade de serviços fluida.
 - **Mapa e contato incorporados** — endereço, WhatsApp, e-mail e Instagram com mapa do Google Maps embutido na seção de contato.
 
@@ -40,15 +40,18 @@ Nenhuma dependência ou build step — HTML, CSS e JavaScript puros:
 
 ```
 pavaneti-engenharia-landing/
-├── index.html              # Página completa (HTML + CSS + JS + imagens em Base64)
+├── index.html              # Marcação (HTML semântico)
+├── style.css               # Estilos (custom properties, Grid, Flexbox, animações)
+├── script.js               # Renderização dos cards, menu mobile, scroll-reveal, contadores
 └── assets/
     ├── logo.png             # Logo original em alta resolução
     ├── icon.png             # Símbolo (engrenagem) recortado, fundo transparente
     ├── logo-full.png        # Lockup completo (símbolo + texto), fundo transparente
+    ├── screenshot-hero.png  # Screenshot usado neste README
     └── services/            # Fotos de cada um dos 16 serviços
 ```
 
-> Os arquivos em `assets/` são mantidos no repositório como fonte para edição futura — o `index.html` publicado já contém todas as imagens embutidas e não depende dessa pasta em produção.
+HTML, CSS e JS são mantidos em arquivos separados por organização e legibilidade — sem bundler, sem build step, cada um é servido como está.
 
 ## Rodando localmente
 
@@ -69,7 +72,7 @@ Publicado via **GitHub Pages**, servindo o `index.html` diretamente da branch `m
 
 🔗 **https://brandonferreiraa.github.io/pavaneti-engenharia-landing/**
 
-Qualquer alteração no `index.html`, seguida de `git push`, é refletida automaticamente no site publicado.
+Qualquer alteração nos arquivos, seguida de `git push`, é refletida automaticamente no site publicado.
 
 ## Contato da empresa
 
