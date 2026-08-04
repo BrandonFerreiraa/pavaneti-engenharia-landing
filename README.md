@@ -9,6 +9,8 @@ Landing page profissional para a **Pavaneti Engenharia**, empresa de engenharia 
 
 **[➜ Ver o site no ar](https://brandonferreiraa.github.io/pavaneti-engenharia-landing/)**
 
+![Preview da landing page da Pavaneti Engenharia](assets/screenshot-hero.png)
+
 ---
 
 ## Sobre o projeto
